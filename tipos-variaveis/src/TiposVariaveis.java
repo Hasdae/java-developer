@@ -1,3 +1,5 @@
+import java.util.Date;
+
 public class TiposVariaveis {
     public static void main(String[] args) throws Exception {
         short numeroCurto = 1;
@@ -5,6 +7,7 @@ public class TiposVariaveis {
         short numeroTeste = (short) numeroLongo;
         System.out.println(numeroTeste);
         final double VALOR_DE_PI = 3.14;
-    
+        Date dataNascimento = new Date();
+        System.out.println(dataNascimento);
     }
 }
