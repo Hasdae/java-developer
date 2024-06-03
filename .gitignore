@@ -28,3 +28,7 @@ controle-de-fluxo/.vscode/settings.json
 DesafioControleFluxo/.vscode/settings.json
 java-anatomia-classes/.vscode/settings.json
 aulaIDE/.vscode/settings.json
+/bin/
+.project
+.classpath
+
