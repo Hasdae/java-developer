@@ -13,9 +13,9 @@ public class StartApp implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
     User user = new User();
-    user.setName("Roberto");
-    user.setUsername("robertinho");
-    user.setPassword("12345678");
+    user.setName("Carlos");
+    user.setUsername("carlinhos");
+    user.setPassword("12345644444");
 
     repository.save(user); //método herdado para salvar os dados no banco de dados
 
