@@ -1,5 +1,6 @@
 package edu.web.api.repository;
 
+import edu.web.api.handler.BusinessException;
 import edu.web.api.model.Usuario;
 import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
@@ -8,6 +9,9 @@ import java.util.List;
 @Repository
 public class UsuarioRepository {
     public void save(Usuario usuario){
+        if (usuario.getLogin()==null){
+            throw new BusinessException("O campo login deve ser informado");
+        }
         System.out.println("SAVE - Recebendo o usuário na camada de repositório");
         System.out.println(usuario);
     }
