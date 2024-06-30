@@ -10,10 +10,6 @@ public class WelcomeController {
     public String welcome(){
         return "Welcome to my Springboot Application";
     }
-    @GetMapping("/login")
-    public String login(){
-        return "login";
-    }
     @GetMapping("/users")
     public String users(){
         return "Authorized user";
