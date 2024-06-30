@@ -32,4 +32,20 @@ public class SecurityConfig {
         return new InMemoryUserDetailsManager(user, admin);
     }
 
+    @Bean
+    public SecurityFilterChain web(HttpSecurity http) throws Exception {
+        http
+                .authorizeHttpRequests((authorize) -> authorize
+                        .requestMatchers("/").permitAll()
+                        .requestMatchers("/login").permitAll()
+                        .requestMatchers("/users").hasAnyRole("USER", "ADMIN")
+                        .requestMatchers("/manager").hasAnyRole("ADMIN")
+                        .anyRequest().authenticated()
+                )
+                    .httpBasic(Customizer.withDefaults())
+                    .formLogin(Customizer.withDefaults());
+        // ...
+
+        return http.build();
+    }
 }
